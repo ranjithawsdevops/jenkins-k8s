@@ -29,7 +29,7 @@ resource "aws_vpc" "kubevpc" {
 }
 resource "aws_subnet" "pubsub01" {
   cidr_block = var.block2
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-east-1a"
   vpc_id     = aws_vpc.kubevpc.id
   map_public_ip_on_launch = true
   tags = {
@@ -38,7 +38,7 @@ resource "aws_subnet" "pubsub01" {
 }
 resource "aws_subnet" "pubsub02" {
   cidr_block = var.block3
-  availability_zone = "ap-south-1b"
+  availability_zone = "us-east-1b"
   vpc_id     = aws_vpc.kubevpc.id
   map_public_ip_on_launch = true
   tags = {
